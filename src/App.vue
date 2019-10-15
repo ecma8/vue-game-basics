@@ -1,16 +1,11 @@
 <template>
   <div id="app">
     <router-view/>
-    <End v-if="isShow"/>
-    <Pend v-if="pisShow"/>
   </div>
 </template>
 <script>
 
     import {Container,Sprite,Graphics} from 'pixi.js';
-    import End from 'xes-tem-end';//不带解析结果页
-    import Pend from 'xes-tem-pend';//平台结果页
-    require('./store.js');
     export default {
         name: 'App',
         data () {
@@ -22,15 +17,10 @@
             Pend
         },
         computed:{
-            isShow(val,value){
-                return store.state.isShow
-            },
-            pisShow(val,value){
-                return store.state.pisShow
-            }
+
         },
         mounted() {
-            console.log("APP组件加载完成");
+
         }
     }
 </script>
